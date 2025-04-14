@@ -18,11 +18,112 @@
     <script defer src="/js/main.js"></script>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <main>
+      <article class="contact">
+        <h1 class="head">Contact Us</h1>
+        <form action="">
+          <fieldset class="name">
+            <section class="firstName">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                class="textInput"
+              />
+              <p class="error-msg hide">This field is required</p>
+            </section>
+
+            <section class="lastName">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                class="textInput"
+              />
+              <p class="error-msg hide">This field is required</p>
+            </section>
+          </fieldset>
+
+          <section class="email">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" class="textInput" />
+            <p class="error-msg hide">Please enter a valid email address</p>
+          </section>
+
+          <fieldset class="query">
+            <legend>Query Type</legend>
+
+            <div class="query-options">
+              <div class="radio">
+                <input
+                  type="radio"
+                  id="general"
+                  name="queryType"
+                  class="selectInput"
+                  value="General Enquiry"
+                />
+                <label for="general">General Enquiry</label>
+              </div>
+
+              <div class="radio">
+                <input
+                  type="radio"
+                  id="support"
+                  name="queryType"
+                  class="selectInput"
+                  value="Support Request"
+                />
+                <label for="support">Support Request</label>
+              </div>
+            </div>
+
+            <p class="error-msg hide" id="query-error">
+              Please select a query type
+            </p>
+          </fieldset>
+
+          <section class="message">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" class="textInput"></textarea>
+            <p class="error-msg hide">This field is required</p>
+          </section>
+
+          <section class="consent">
+            <div class="checkBox">
+              <input
+                type="checkbox"
+                name="consent"
+                id="consent"
+                class="selectInput"
+              />
+              <label for="consent"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+            <p class="error-msg hide" id="consent-error">
+              To submit this form, please consent to being contacted
+            </p>
+          </section>
+
+          <button type="submit" class="submit">Submit</button>
+        </form>
+        <section class="success hide">
+          <div class="title">
+            <img
+              src="/images/icon-success-check.svg"
+              alt="success"
+              width="20"
+              height="21"
+            />
+            <h2 class="success-head">Message Sent!</h2>
+          </div>
+          <p class="success-msg">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
