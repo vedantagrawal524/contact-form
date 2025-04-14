@@ -184,6 +184,12 @@ body {
   border-radius: 0.6em;
   margin-top: 2em;
   z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.success.show {
+  opacity: 1;
 }
 
 .success .title {
@@ -213,7 +219,78 @@ body {
   display: none;
 }
 
+/* Custom CheckBox */
+.consentInput {
+  display: none;
+}
+
+.checkBox {
+  display: flex;
+  align-items: center;
+}
+
+.checkBox label {
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+.checkBox label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid var(--grey-500);
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.consentInput:checked + label::before {
+  background-image: url("/images/icon-checkbox-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Custom Radio */
+.radioInput {
+  display: none;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio label {
+  position: relative;
+  padding-left: 2em;
+  cursor: pointer;
+}
+
+.radio label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid var(--grey-500);
+  border-radius: 50%;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radioInput:checked + label::before {
+  background-image: url("/images/icon-radio-selected.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 620px) {
+  .html {
+    font-size: 15.5px;
+  }
   .name {
     display: flex;
     flex-direction: column;
@@ -240,6 +317,9 @@ body {
 }
 
 @media screen and (max-width: 320px) {
+  .html {
+    font-size: 14px;
+  }
   .success {
     right: -10%;
     max-width: 9em;

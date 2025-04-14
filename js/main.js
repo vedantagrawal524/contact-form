@@ -52,6 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
           }
      });
 
+     // show success
+     function showSuccessMessage() {
+          successSection.classList.add('show');
+          setTimeout(() => {
+               successSection.classList.remove('show');
+          }, 3000);
+     }
+
+
      form.addEventListener("submit", (e) => {
           e.preventDefault();
           let isValid = true;
@@ -100,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Success
           if (isValid) {
-               successSection.classList.remove("hide");
+               showSuccessMessage();
                form.reset();
                document.querySelectorAll(".radio").forEach((r) =>
                     r.classList.remove("active")
