@@ -10,6 +10,7 @@ This is a solution to the [Contact Form challenge on Frontend Mentor](https://ww
   - [Screenshots](#screenshots)
   - [Live Links](#live-links)
   - [Built With](#built-with)
+  - [Backend Features](#backend-features)
 - [Author](#author)
 
 ---
@@ -30,15 +31,15 @@ Users should be able to:
 
 #### 🖥️ Desktop View
 
-![Desktop Active-state Design](./design/focus-and-active-state.jpg)
+![Desktop Active-state Design](./client/design/focus-and-active-state.jpg)
 
-![Desktop Error-state Design](./design/error-state.jpg)
+![Desktop Error-state Design](./client/design/error-state.jpg)
 
-![Desktop Success-state Design](./design/success-state.jpg)
+![Desktop Success-state Design](./client/design/success-state.jpg)
 
 #### 📱 Mobile View
 
-![Mobile Design](./design/mobile-design.jpg)
+![Mobile Design](./client/design/mobile-design.jpg)
 
 ---
 
@@ -57,6 +58,19 @@ Users should be able to:
 - JavaScript
 - Media Queries
 - [Vercel](https://vercel.com/) for deployment
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- [Render](https://render.com/) for Server deployment  
+
+---
+### Backend Features
+
+- Created an **Express.js server** to handle Form submissions.
+- Information submitted via the form are stored securely in a **MongoDB database**.
+- Used **Mongoose** to define the user schema and perform validations.
+- Hosted backend using **Render**.
 
 ---
 
