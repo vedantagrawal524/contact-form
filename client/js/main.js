@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  const API_BASE_URL = "";
+  const API_BASE_URL = "https://contact-form-828g.onrender.com";
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let isValid = true;
